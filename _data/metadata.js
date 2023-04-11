@@ -4,8 +4,8 @@ module.exports = {
 	"language": "en",
 	"description": "I am writing about my experiences as a naval navel-gazer.",
 	"author": {
-		"name": "Your Name Here",
-		"email": "youremailaddress@example.com",
+		"name": "Kariyma Murphy",
+		"email": "kariyma@oohnice.design",
 		"url": "https://example.com/about-me/"
 	}
 }
