@@ -33,30 +33,20 @@
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
 		<header>
 			<a href="/" class="home-link" title="{{ metadata.title }}">
 				<img class="logo" alt="Logo" src="https://freight.cargo.site/t/original/i/a24ab61b3553e2e167a72b869e9cb66520c4b7537a63e4332379bee48d5a1261/website_logo-01.png">
 				</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
+			{% include "header.njk" %}
 		</header>
 
-		<main id="skip">
+		<main class="content" id="skip">
 			{{ content | safe }}
 		</main>
 
-		<footer>
+		{# <footer class="content">
 			{% include 'footer.njk' %}
-		</footer>
+		</footer> #}
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
