@@ -52,9 +52,6 @@ body {
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
-}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -173,6 +170,12 @@ header {
 	text-decoration: underline;
 }
 
+.logo {
+	background-color: transparent;
+	width: 68px;
+	height: 68px;
+}
+
 /* Posts list */
 .postlist {
 	list-style: none;
@@ -217,16 +220,51 @@ header {
 }
 
 /* Tags */
+
 .post-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.75em; /* 12px /16 */
+  padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
+  margin-left: 0.6666666666667em; /* 8px /12 */
+  margin-top: 0.5em; /* 6px /12 */
+  margin-bottom: 0.5em; /* 6px /12 */
+  color: var(--text-color);
+  border: 1px solid var(--color-gray-90);
+  border-radius: 0.25em; /* 3px /12 */
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+.postlist-date {
 	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
+  align-items: center;
+  justify-content: center;
+	font-size: 0.75em; /* 12px /16 */
+  padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
+  margin-top: 0.5em; /* 6px /12 */
+  margin-bottom: 0.5em; /* 6px /12 */
+	color: var(--text-color);
+	border-radius: 0.25em; /* 3px /12 */
+	border: 1px solid transparent;
+	text-decoration: none;
+  line-height: 1.8;
+}
+
+a[href].post-tag,
+a[href].post-tag:visited {
+  color: inherit;
+}
+a[href].post-tag:hover,
+a[href].post-tag:focus {
+  background-color: var(--lightgray);
 }
 .postlist-item > .post-tag {
-	align-self: center;
+  align-self: center;
 }
+
 
 /* Tags list */
 .post-metadata {
@@ -239,6 +277,17 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
+}
+
+.page-tags-list {
+	padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.page-tags-list-item {
+	justify-content: center;
 }
 
 /* Direct Links / Markdown Headers */
@@ -275,17 +324,11 @@ h2 + .header-anchor {
 
 .footer-item {
 	justify-content: flex-start;
-	width: 50%;
 	height: auto;
 	text-align: left;
+	margin: 0.5rem 0.5rem 0 0;
 }
 
 hr.footer {
 	border-top: 1px dashed var(--color-gray-50);
-}
-
-.logo {
-	background-color: transparent;
-	width: 68px;
-	height: 68px;
 }
