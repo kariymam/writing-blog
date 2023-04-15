@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_drafts/Another New Note.md",
+                "file": "thirdpost.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/Another New Note.md",
+                "file": "thirdpost.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/Another New Note.md",
+                "file": "thirdpost.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_drafts/Another New Note.md"
+                "file": "thirdpost.md"
               }
             }
           }
@@ -149,15 +149,15 @@
   },
   "active": "febadad86b253c74",
   "lastOpenFiles": [
+    "secondpost.md",
+    "firstpost.md",
     "fifthpost.md",
+    "_drafts/This Is A Draft Note.md",
+    "_drafts/Another New Note.md",
     "fourthpost/fourthpost.md",
     "fourthpost/possum.png",
     "thirdpost.md",
-    "secondpost.md",
-    "firstpost.md",
     "_setup/templates/new-post.md",
-    "_drafts/Another New Note.md",
-    "_drafts/This Is A Draft Note.md",
     "media/possum.png",
     "media",
     "private/This Is My New Note.md",

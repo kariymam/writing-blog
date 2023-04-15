@@ -6,4 +6,4 @@ draft: true
 ---
 This is a draft post
 
-<img src=https://res.cloudinary.com/dvf7zwben/image/upload/v1681332547/cld-sample-5.jpg width="50%">
+<img src=https://res.cloudinary.com/dvf7zwben/image/upload/v1681332547/cld-sample-5.jpg>
