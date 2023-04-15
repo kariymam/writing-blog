@@ -9,9 +9,6 @@
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.typekit.net/xig8qvf.css">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
@@ -47,11 +44,6 @@
 		<main class="content" id="skip">
 			{{ content | safe }}
 		</main>
-
-		{# <footer class="content">
-			{% include 'footer.njk' %}
-		</footer> #}
-
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
 </html>
