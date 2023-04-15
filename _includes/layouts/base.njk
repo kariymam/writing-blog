@@ -9,9 +9,8 @@
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+		<link rel="stylesheet" href="https://use.typekit.net/xig8qvf.css">
+		<meta name="generator" content="{{ eleventy.generator }}">
 
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
@@ -33,27 +32,18 @@
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
+		<header style="background-color: var(--header-bg);">
+			<div class="header-container" id="skip">
+			<a href="/" class="home-link" title="{{ metadata.title }}">
+				<img class="logo" alt="Logo" src="https://freight.cargo.site/t/original/i/a24ab61b3553e2e167a72b869e9cb66520c4b7537a63e4332379bee48d5a1261/website_logo-01.png">
+				</a>
+			{% include "header.njk" %}
+			</div>
 		</header>
 
-		<main id="skip">
+		<main class="content" id="skip">
 			{{ content | safe }}
 		</main>
-
-		<footer></footer>
-
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
 </html>
