@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "thirdpost.md",
+                "file": "secondpost.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "thirdpost.md",
+                "file": "secondpost.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "thirdpost.md",
+                "file": "secondpost.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "thirdpost.md"
+                "file": "secondpost.md"
               }
             }
           }
@@ -149,14 +149,14 @@
   },
   "active": "febadad86b253c74",
   "lastOpenFiles": [
-    "secondpost.md",
     "firstpost.md",
     "fifthpost.md",
+    "thirdpost.md",
+    "secondpost.md",
     "_drafts/This Is A Draft Note.md",
     "_drafts/Another New Note.md",
     "fourthpost/fourthpost.md",
     "fourthpost/possum.png",
-    "thirdpost.md",
     "_setup/templates/new-post.md",
     "media/possum.png",
     "media",
