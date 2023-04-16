@@ -1,4 +1,5 @@
 _site/
 node_modules/
 package-lock.json
-content/blog/_drafts/
+.obsidian/*
+content/blog/Workspace/
