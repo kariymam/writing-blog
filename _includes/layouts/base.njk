@@ -7,11 +7,11 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 
 		{#- Atom and JSON feeds included by default #}
+		<link rel="icon" href="{{ '/img/website_logo-01.png' | url }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 		<link rel="stylesheet" href="https://use.typekit.net/xig8qvf.css">
 		<meta name="generator" content="{{ eleventy.generator }}">
-
 		{#-
 		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
 		1. You can add to them using `{% css %}`
@@ -32,7 +32,7 @@
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
-		<header style="background-color: var(--header-bg);">
+		<header>
 			<div class="header-container">
 			<a href="/" class="home-link" title="{{ metadata.title }}">
 				<img class="logo" alt="Logo" src="https://freight.cargo.site/t/original/i/a24ab61b3553e2e167a72b869e9cb66520c4b7537a63e4332379bee48d5a1261/website_logo-01.png">
