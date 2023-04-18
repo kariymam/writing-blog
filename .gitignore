@@ -1,4 +1,7 @@
+.vscode
 _site/
 node_modules/
 package-lock.json
-content/blog/_drafts/
+private/
+.obsidian/
+drafts/
