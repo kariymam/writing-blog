@@ -1,6 +1,6 @@
 ---
 title: No Humans Involved | After Sylvia Wynter (ARCHIVE)
-description: Originally written for my SVA Design Writing and Research Summer in 2019
+description: Originally written for my SVA Design Writing and Research Summer Residency in 2019
 date: "git Last Modified"
 draft: false
 tags:
