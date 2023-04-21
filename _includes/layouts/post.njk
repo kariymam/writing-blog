@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 ---
-<section class="container">
 	{# Only include the syntax highlighter CSS on blog posts #}
 	{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 	{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
@@ -27,7 +26,3 @@ layout: layouts/base.njk
 	</ul>
 	{%- endif %}
 	{%- endif %}
-</section>
-<footer class="footer-container" style="background: var(--background-color);">
-			{% include 'footer-abrv.njk' %}
-		</footer>

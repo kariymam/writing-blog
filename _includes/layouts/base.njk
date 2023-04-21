@@ -42,8 +42,13 @@
 		</header>
 
 		<main class="content" id="skip">
+			<section class="container">
 			{{ content | safe }}
+			</section>
 		</main>
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+		<footer class="container" style="background: var(--background-color);">
+			{% include 'footer-abrv.njk' %}
+		</footer>
 	</body>
 </html>

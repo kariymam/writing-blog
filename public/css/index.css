@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400&display=swap');
 
+@font-face {
+  font-family: "silva-text";
+  src: url("https://use.typekit.net/xig8qvf.css");
+	font-weight: 300 400 500;
+}
+
 /* Defaults */
 :root {
-	--font-family: "source-serif-pro", -apple-system, system-ui, serif, Icons;
+	--font-family: "silva-text", -apple-system, system-ui, serif, Icons;
 	--font-family-monospace: 'source-code-variable', Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 	--display-font-family: "space-grotesk-variable", -apple-system, system-ui, serif, Icons;
-	--site-margin: 114px;
-	--mobile-margin: 24px;
+	--site-margin: 10%;
+	--mobile-margin: 2em;
 	--page-padding: 1em 0 2em 0;
 }
 
@@ -51,9 +57,10 @@ body {
 	padding: 0;
 	margin: 0 auto;
 	font-family: var(--font-family);
+	font-kerning: normal;
 	color: var(--text-color);
 	background: var(--end-bg-color);
-	-webkit-text-size-adjust:100%
+	-webkit-text-size-adjust: 100%;
 }
 html {
 	overflow-y: scroll;
@@ -62,10 +69,6 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-}
-
-section {
-	max-width: 70em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -84,8 +87,10 @@ p:last-child {
 }
 p {
 	font-family: var(--font-family);
-	line-height: 1.5;
-	font-size: 1.2em;
+	line-height: 1.75;
+	font-size: 20px;
+	max-width: 75%;
+	font-weight: 300;
 }
 
 h1, h2, h3, h4 {
@@ -260,20 +265,19 @@ hr {
 	padding-top: 69.5px;
 }
 
-.container, .home-container, .header-container {
+.container, .header-container {
+	display: flex;
 	padding: 1em 0;
 	margin-left: var(--site-margin); /* or auto*/
 	margin-right: var(--site-margin); /* or auto*/
 }
 
 .container {
-	display: flex;
 	flex-direction: column;
 	align-items: baseline;
 }
 
 .header-container {
-	display: flex;
   gap: 0.5em 1.5em;
   flex-wrap: wrap;
   align-items: center;
@@ -284,9 +288,10 @@ hr {
 	flex-direction: row;
 	align-items: flex-start;
 	padding-bottom: 3em;
+	width: 100%;
 }
 @media screen and (max-width: 768px) {
-	.container, .home-container, .header-container {
+	.container, .header-container {
 		margin-left: var(--mobile-margin);
 		margin-right: var(--mobile-margin);
 	}
@@ -307,13 +312,11 @@ hr {
 }
 
 .home-title {
-	max-width: 70ch;
 	font-size: 75%;
 	font-weight: 300;
 }
 @media screen and (max-width: 768px) {
 	.home-title {
-		max-width: 100%;
 		font-size: 100%;
 	}
 }
@@ -475,10 +478,9 @@ h2 + .header-anchor {
 .footer {
 	display: flex;
 	flex-direction: row;
-	list-style: none;
-	text-decoration: none;
-	gap: 1em;
-	padding-left: 0;
+  list-style: none;
+  padding-left: 0;
+  gap: 1em;
 }
 @media screen and (max-width: 768px) {
 	.footer {
