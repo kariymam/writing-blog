@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400&display=swap');
+@import url(/css/color.css);
 
 @font-face {
   font-family: "silva-text";
@@ -14,37 +14,6 @@
 	--site-margin: 10%;
 	--mobile-margin: 2em;
 	--page-padding: 1em 0 2em 0;
-}
-
-/* Theme colors */
-:root {
-	--color-gray-90: rgba(51, 51, 51, 1); /* text color*/
-	--end-bg-color: rgba(244, 238, 232, 1);/* golden */
-	--start-bg-color: rgba(255, 213, 86, 1);/* creme */
-
-	--gradient: linear-gradient(180deg, var(--start-bg-color) 48.65%, var(--end-bg-color) 96.35%);
-	--divider: 1px solid var(--color-gray-90);
-
-	--text-color: var(--color-gray-90);
-	--text-color-link: var(--color-gray-90);
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
-
-	--syntax-tab-size: 2;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-90: rgba(218, 216, 216, 1);
-		--end-bg-color: rgba(8, 8, 8, 1);/* blueish */
-		--start-bg-color: rgba(7, 15, 37, 1);/* black */
-
-		--divider: 1px solid rgba(218, 216, 216, 0.26);
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-	}
 }
 
 /* Global stylesheet */
@@ -265,7 +234,7 @@ hr {
 	padding-top: 69.5px;
 }
 
-.container, .header-container {
+.container, .header-container, footer {
 	display: flex;
 	padding: 1em 0;
 	margin-left: var(--site-margin); /* or auto*/
@@ -475,19 +444,13 @@ h2 + .header-anchor {
 
 /* Footer */
 
-.footer {
-	display: flex;
+footer {
 	flex-direction: row;
-  list-style: none;
-  padding-left: 0;
-  gap: 1em;
-}
-@media screen and (max-width: 768px) {
-	.footer {
-		flex-direction: column;
-	}
 }
 
+footer > ul {
+	list-style-type: none;
+}
 
 .footer-item {
 	height: auto;
@@ -496,10 +459,4 @@ h2 + .header-anchor {
 
 hr.divider {
 	border-top: var(--divider);
-}
-
-.footer-container {
-	width: 100%;
-	justify-items: center;
-	background-color: var(--end-bg-color);
 }
