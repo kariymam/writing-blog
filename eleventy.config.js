@@ -104,7 +104,7 @@ eleventyConfig.on('eleventy.before', async () => {
 	const cssInput = fs.readFileSync('public/css/index.css', {
 		encoding: 'utf-8',
 	})
-	const cssOutDir = '_site/css/'
+	const cssOutDir = 'public/css/'
 	const cssOutFile = 'public.css'
 	const cssOutput = cssOutDir + cssOutFile
 	if (!fs.existsSync(cssOutDir)) {
