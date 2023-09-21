@@ -33,9 +33,6 @@
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
 }
-.postlist-item-active {
-	font-variation-settings: "wdth" 100, "wght" 100;
-}
 
 .postlist-item > div {
 	display: flex;
