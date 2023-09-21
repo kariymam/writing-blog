@@ -1,145 +1,145 @@
 @font-face {
-  font-family: kepler-3-variable, sans-serif;
-  src: url(https://use.typekit.net/uxs6fmy.css);
+	font-family: kepler-3-variable, sans-serif;
+	src: url(https://use.typekit.net/uxs6fmy.css);
 }
 
 @font-face {
-  font-family: degular-variable, sans-serif;
-  src: url(https://use.typekit.net/uxs6fmy.css);
+	font-family: degular-variable, sans-serif;
+	src: url(https://use.typekit.net/uxs6fmy.css);
 }
 
 :root {
-  --display-font: degular-variable, "Franklin Gothic Medium", "Arial Narrow",
-    Helvetica, Arial, sans-serif, Icons;
-  --body-font: kepler-3-variable, Georgia, Garamond, Times, serif, Icons;
+	--display-font: degular-variable, "Franklin Gothic Medium", "Arial Narrow",
+		Helvetica, Arial, sans-serif, Icons;
+	--body-font: kepler-3-variable, Georgia, Garamond, Times, serif, Icons;
 }
 
 html,
 body {
 	font-size: 128px;
-  font-family: var(--body-font);
-  font-variation-settings: "opsz" 11, "wdth" 104, "wght" 328;
-  letter-spacing: normal;
-  color: var(--text);
+	font-family: var(--body-font);
+	font-variation-settings: "opsz" 11, "wdth" 104, "wght" 328;
+	letter-spacing: normal;
+	color: var(--text);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  line-height: 1;
-  letter-spacing: -0.15px;
-  font-family: var(--display-font);
-  margin-block-end: 0.5em;
+	line-height: 1;
+	letter-spacing: -0.15px;
+	font-family: var(--display-font);
+	margin-block-end: 0.5em;
 }
 
 h1,
 h2 {
-  text-align: center;
+	text-align: center;
 }
 
 h3,
 h4 {
-  font-size: 0.2em;
-  font-variation-settings: "ital" 0, "opsz" 30, "wght" 500;
+	font-size: 0.2em;
+	font-variation-settings: "ital" 0, "opsz" 30, "wght" 500;
 }
 
 h1 {
-  font-size: 0.5em;
-  font-variation-settings: "ital" 0, "opsz" 68, "wght" 300;
+	font-size: 0.5em;
+	font-variation-settings: "ital" 0, "opsz" 68, "wght" 300;
 }
 
 h2 {
-  font-size: 0.5em;
-  font-variation-settings: "ital" 0, "opsz" 30, "wght" 300;
-  padding-top: 32px;
-  color: var(--gray);
+	font-size: 0.5em;
+	font-variation-settings: "ital" 0, "opsz" 30, "wght" 300;
+	padding-top: 32px;
+	color: var(--gray);
 }
 
 @media only screen and (max-width: 912px) {
-  h1 {
-    font-size: 0.5em;
-  }
+	h1 {
+		font-size: 0.5em;
+	}
 
-  h2 {
-    font-size: 0.25em;
-  }
+	h2 {
+		font-size: 0.25em;
+	}
 
-  h3,
-  h4 {
-    font-size: 0.156em;
-  }
+	h3,
+	h4 {
+		font-size: 0.156em;
+	}
 }
 
 p {
-  font-size: 0.156em;
-  line-height: 160%;
-  letter-spacing: -0.15px;
-  padding: 0.625em 0;
+	font-size: 0.156em;
+	line-height: 160%;
+	letter-spacing: -0.15px;
+	padding: 0.625em 0;
 }
 
 @media only screen and (max-width: 912px) {
-  p {
-    font-size: 0.25em;
-  }
+	p {
+		font-size: 0.25em;
+	}
 }
 
 small {
-  font-size: 0.125em;
+	font-size: 0.125em;
 }
 
 a {
-  transition-timing-function: ease-in;
-  transition: 300ms;
+	transition-timing-function: ease-in;
+	transition: 300ms;
 }
 
 a,
 .sidenote {
-  text-decoration: none;
-  counter-reset: none;
+	text-decoration: none;
+	counter-reset: none;
 }
 
 a:visited {
-  text-decoration: none;
-  color: var(--text);
+	text-decoration: none;
+	color: var(--text);
 }
 
 li {
-  font-family: var(--display-font);
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
-  text-align: center;
-  line-height: normal;
-  justify-content: center;
+	font-family: var(--display-font);
+	font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
+	text-align: center;
+	line-height: normal;
+	justify-content: center;
 }
 
 li > a {
-  line-height: normal;
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
+	line-height: normal;
+	font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
 }
 
 li.nav-link > a {
-  font-size: 0.25em;
+	font-size: 0.25em;
 }
 
 li.footer-link > a {
-  font-size: 0.156em;
+	font-size: 0.156em;
 }
 
 li > a:hover {
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
+	font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
 }
 
 li.footer-link > a:hover {
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
+	font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
 }
 
 .post-date,
 .post-tag {
-  font-family: var(--display-font);
-  font-size: 0.2em;
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
-  line-height: normal;
-  letter-spacing: -0.24px;
-  width: 100%;
-  color: var(--gray);
+	font-family: var(--display-font);
+	font-size: 0.2em;
+	font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
+	line-height: normal;
+	letter-spacing: -0.24px;
+	width: 100%;
+	color: var(--gray);
 }
