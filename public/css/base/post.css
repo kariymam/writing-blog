@@ -23,6 +23,10 @@ article > section {
 	flex-direction: row;
 }
 
+.post-metadata {
+	margin-bottom: 0.5em;
+}
+
 /* ------- FOOTNOTES -------------------------------------*/
 
 .sidenote { /* ------- LEAVE THIS ALONE KARIYMA -------------------------------------*/
@@ -94,3 +98,4 @@ padding-left: 32px;
 justify-content: flex-start;
 padding-right: 32px;
 }
+

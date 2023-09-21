@@ -1,0 +1,61 @@
+.postlist {
+	list-style: none;
+	padding: 0;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.2em;
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+  width: 100%;
+}
+.postlist-link {
+	font-size: 1em; /* 19px /16 */
+	font-variation-settings: "wdth" 100, "wght" 100;
+	flex-basis: calc(100% - 1.5rem);
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active {
+	font-variation-settings: "wdth" 100, "wght" 100;
+}
+
+.postlist-item > div {
+	display: flex;
+  width: 100%;
+	margin-top: 0.2em
+}
+
+span.divider {
+	display: inline-flex;
+	border-left: var(--divider);
+	height: 0.25em;
+}
+
+.post-date,
+.post-tag {
+  font-family: var(--display-font);
+  font-size: 0.2em;
+  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  width: 100%;
+  color: var(--gray);
+}
