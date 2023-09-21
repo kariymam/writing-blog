@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
-	eleventyConfig.addWatchTarget("./public/css/*.css");
+	eleventyConfig.addWatchTarget("./public/css/*");
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
@@ -103,10 +103,10 @@ module.exports = function(eleventyConfig) {
 // PostCSS solution via equk https://equk.co.uk/2023/06/29/11ty-postcss-integration-optimized/
 // Run postcss (insert css to html later)
 eleventyConfig.on('eleventy.before', async () => {
-	const cssInput = fs.readFileSync('_site/css/index.css', {
+	const cssInput = fs.readFileSync('public/css/index.css', {
 		encoding: 'utf-8',
 	})
-	const cssOutDir = 'public/css/'
+	const cssOutDir = '_site/css/'
 	const cssOutFile = 'public.css'
 	const cssOutput = cssOutDir + cssOutFile
 	if (!fs.existsSync(cssOutDir)) {
