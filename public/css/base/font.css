@@ -98,8 +98,9 @@ a:visited {
   color: var(--text-color);
 }
 
-.home-link > a{
+.home-link{
 	font-size: 0.25em;
+	font-family: var(--display-font);
 }
 
 
