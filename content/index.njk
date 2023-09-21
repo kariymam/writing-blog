@@ -5,11 +5,9 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
+<section>
 <div class="home-container">
-	<div class="home-title">
-		<h1>Welcome to my little writing corner of the internet.</h1>
-		</div>
-	<div class="home-latest">
+	<div>
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 		<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>

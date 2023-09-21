@@ -1,3 +1,8 @@
+const fs = require('fs')
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const atImport = require('postcss-import');
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -15,7 +20,8 @@ module.exports = function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
+		"./css/" : "/"
 	});
 
 	// Run Eleventy when these files change:
@@ -91,6 +97,29 @@ module.exports = function(eleventyConfig) {
 			slugify: eleventyConfig.getFilter("slugify")
 		});
 	});
+
+// PostCSS solution via equk https://equk.co.uk/2023/06/29/11ty-postcss-integration-optimized/
+// Run postcss (insert css to html later)
+eleventyConfig.on('eleventy.before', async () => {
+	const cssInput = fs.readFileSync('public/css/index.css', {
+		encoding: 'utf-8',
+	})
+	const cssOutDir = '_site/css/'
+	const cssOutFile = 'public.css'
+	const cssOutput = cssOutDir + cssOutFile
+	if (!fs.existsSync(cssOutDir)) {
+		fs.mkdirSync(cssOutDir, { recursive: true })
+	}
+	const minified = await postcss([atImport(), cssnano(), autoprefixer()])
+		.process(cssInput, { from: undefined })
+		.then((r) => {
+			fs.writeFile(cssOutput, r.css, (err) => {
+				if (err) throw err
+				console.log(`[11ty] Writing Postcss Output: ${cssOutput}`)
+			})
+		})
+	return minified
+})
 
 	// Features to make your build faster (when you need them)
 

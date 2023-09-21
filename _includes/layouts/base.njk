@@ -10,45 +10,28 @@
 		<link rel="icon" href="{{ '/img/website_logo-01.png' | url }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-		<link rel="stylesheet" href="https://use.typekit.net/xig8qvf.css">
+		<link rel="stylesheet" href="https://use.typekit.net/uxs6fmy.css" />
 		<meta name="generator" content="{{ eleventy.generator }}">
-		{#-
-		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. You can add to them using `{% css %}`
-		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
-		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add an arbitrary string to the bundle #}
-		{%- css %}* { box-sizing: border-box; }{% endcss %}
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/index.css" %}{% endcss %}
-		{#- Or add from node_modules #}
-		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
-
-		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
-		<style>{% getBundle "css" %}</style>
+		<link rel="stylesheet" href="/css/public.css" />
+    {# <link rel="stylesheet" href="/css/{{ cssFile }}" /> #}
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 		<header>
 			<div class="header-container">
 			<a href="/" class="home-link" title="{{ metadata.title }}">
-				<img class="logo" alt="Logo" src="https://freight.cargo.site/t/original/i/a24ab61b3553e2e167a72b869e9cb66520c4b7537a63e4332379bee48d5a1261/website_logo-01.png">
+				[ka · ree · mah] murphy
 				</a>
 			{% include "header.njk" %}
 			</div>
 		</header>
 
-		<main class="content" id="skip">
-			<section class="container">
+		<main id="skip">
 			{{ content | safe }}
-			</section>
 		</main>
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-		<footer class="container" style="background: var(--background-color);">
-			{% include 'footer-abrv.njk' %}
+		<footer class="main-footer">
+			{% include 'footer.njk' %}
 		</footer>
 	</body>
 </html>
