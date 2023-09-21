@@ -18,21 +18,19 @@
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 		<header>
-			<div class="header-container">
+			<div>
 			<a href="/" class="home-link" title="{{ metadata.title }}">
-				<img class="logo" alt="Logo" src="https://freight.cargo.site/t/original/i/a24ab61b3553e2e167a72b869e9cb66520c4b7537a63e4332379bee48d5a1261/website_logo-01.png">
+				[ka · ree · mah] murphy
 				</a>
 			{% include "header.njk" %}
 			</div>
 		</header>
 
-		<main class="content" id="skip">
-			<section class="container">
+		<main id="skip">
 			{{ content | safe }}
-			</section>
 		</main>
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-		<footer class="container">
+		<footer>
 			{% include 'footer-abrv.njk' %}
 		</footer>
 	</body>

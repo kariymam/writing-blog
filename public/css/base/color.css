@@ -1,7 +1,8 @@
 :root {
-	--primary: rgba(255, 213, 86, 0);
-	--secondary:  rgba(244, 238, 232, 0);
-	--color-gray-90: rgba(51, 51, 51, 0); /* text color*/
+	--off-white: #f4f4e8;
+  --text: #111111;
+  --gray: #525252;
+	--color-gray-90: rgba(51, 51, 51, 1); /* text color*/
 	--text-color-link-active: #6969f7;
 	--text-color-link-visited: #0b0bea;
 
