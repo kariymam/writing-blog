@@ -15,6 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--off-white: #111111;
 		--primary: rgba(8, 8, 8, 1);
 		--secondary: rgba(7, 15, 37, 1);
 		--color-gray-90: rgba(218, 216, 216, 1);
