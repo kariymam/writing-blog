@@ -3,4 +3,5 @@ _site/
 node_modules/
 private/
 .obsidian/
-drafts/
+.DS_Store
+.editorconfig

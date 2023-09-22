@@ -21,6 +21,7 @@ article > header {
 article > section {
 	display: flex;
 	flex-direction: row;
+	width: 100%;
 }
 
 .post-metadata {
