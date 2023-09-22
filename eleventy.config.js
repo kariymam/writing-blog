@@ -20,12 +20,10 @@ module.exports = function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
 		"./public/": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css",
-		"./css/" : "/"
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
 	});
 
-	// Run Eleventy when these files change:
-	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
+	eleventyConfig.addPassthroughCopy({"public/robots.txt" : "/robots.txt"});
 
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
@@ -104,7 +102,7 @@ eleventyConfig.on('eleventy.before', async () => {
 	const cssInput = fs.readFileSync('public/css/index.css', {
 		encoding: 'utf-8',
 	})
-	const cssOutDir = 'public/css/'
+	const cssOutDir = '_site/css/'
 	const cssOutFile = 'public.css'
 	const cssOutput = cssOutDir + cssOutFile
 	if (!fs.existsSync(cssOutDir)) {

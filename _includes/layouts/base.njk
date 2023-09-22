@@ -12,7 +12,11 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 		<link rel="stylesheet" href="https://use.typekit.net/uxs6fmy.css" />
 		<meta name="generator" content="{{ eleventy.generator }}">
-		<link rel="stylesheet" href="/css/public.css" />
+		<style>
+			{% include "_site/css/public.css" %}
+		</style>
+
+		{# <link rel="stylesheet" href="/css/public.css" /> #}
     {# <link rel="stylesheet" href="/css/{{ cssFile }}" /> #}
 	</head>
 	<body>

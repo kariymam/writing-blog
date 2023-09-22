@@ -18,7 +18,7 @@ html,
 body {
   font-size: 128px;
   font-family: var(--body-font);
-  color: var(--text);
+  color: var(--text-color);
 }
 
 h1,
@@ -95,13 +95,12 @@ a,
 
 a:visited {
   text-decoration: none;
-  color: var(--text);
+  color: var(--text-color);
 }
 
-.home-link > a{
-	transition-timing-function: ease-in;
-  transition: 300ms;
+.home-link{
 	font-size: 0.25em;
+	font-family: var(--display-font);
 }
 
 
@@ -118,8 +117,6 @@ li > a {
 }
 
 li.nav-link > a {
-	transition-timing-function: ease-in;
-  transition: 300ms;
   font-size: 0.156em;
 }
 
@@ -133,12 +130,4 @@ li.footer-link {
 
 .footer-item {
 	max-width: 600px;
-}
-
-li > a:hover {
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
-}
-
-li.footer-link > a:hover {
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
 }
