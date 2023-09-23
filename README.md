@@ -9,7 +9,7 @@ To-Do:
 - [ ] Img folder
 - [ ] Responsive images
 - [ ] Icon styling
-- [ ] Side-note component
+- [ ] Use markdown-it-attrs for adding side-note class to .md files
 - [ ] Redesign homepage
   - [ ] Add gallery
   - [ ] Add about section
