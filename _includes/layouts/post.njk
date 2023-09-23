@@ -6,7 +6,7 @@ cssFile: "base/post.css"
 	{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 	{%- css %}{% include "public/css/base/prism-diff.css" %}{%- endcss %}
 	<article>
-		<header>
+		<header class="post-header">
 			<ul class="post-metadata">
 				{%- for tag in tags | filterTagList %}
 				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}

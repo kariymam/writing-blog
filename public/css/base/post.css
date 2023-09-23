@@ -3,7 +3,6 @@ article {
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 2fr 1fr;
 	grid-gap: 0.25em;
-	margin: 0 auto;
 }
 
 article, .links-nextprev {
@@ -24,8 +23,19 @@ article > section {
 	width: 100%;
 }
 
+.post-header {
+	margin: 0;
+}
+
 .post-metadata {
-	margin: 0.5em 0;
+	margin-bottom: 0.5em;
+}
+
+.post-date, .post-tag {
+	display: flex;
+	width: 100%;
+  justify-content: left;
+	gap: 0.156em;
 }
 
 /* ------- FOOTNOTES -------------------------------------*/
