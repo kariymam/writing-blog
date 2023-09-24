@@ -1,7 +1,9 @@
 const fs = require('fs')
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const markdownItFootnotes = require('markdown-it-footnote');
+
+
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -18,13 +20,6 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
 
-const markdownItOptions = {
-	html: true,
-	breaks: true,
-	linkify: true
-}
-
-const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
 
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
@@ -93,9 +88,6 @@ module.exports = function(eleventyConfig) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
 
-// https://giuliachiola.dev/posts/add-html-classes-to-11ty-markdown-content/
-	eleventyConfig.setLibrary('md', markdownLib)
-
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
@@ -108,6 +100,8 @@ module.exports = function(eleventyConfig) {
 			level: [1,2,3,4],
 			slugify: eleventyConfig.getFilter("slugify")
 		});
+		mdLib.use(markdownItFootnotes);
+		mdLib.use(markdownItAttrs);
 	});
 
 // PostCSS solution via equk https://equk.co.uk/2023/06/29/11ty-postcss-integration-optimized/

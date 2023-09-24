@@ -12,7 +12,10 @@
   --display-font: degular-variable, "Franklin Gothic Medium", "Arial Narrow",
     Helvetica, Arial, sans-serif, Icons;
   --body-font: kepler-3-variable, Georgia, Garamond, Times, serif, Icons;
+
 }
+
+/* FONT SIZE SETTINGS */
 
 html,
 body {
@@ -26,7 +29,6 @@ h2,
 h3,
 h4 {
   line-height: 1;
-	font-variation-settings: "ital" 0, "opsz" 30, "wght" 200;
 }
 
 h1,
@@ -38,21 +40,15 @@ h2 {
 h3,
 h4 {
   font-size: 0.2em;
-  font-variation-settings: "ital" 0, "opsz" 30, "wght" 500;
 }
 
 h1 {
-	font-family: var(--display-font);
   font-size: 0.5em;
 }
 
 h2 {
-	font-family: var(--body-font);
-	font-variation-settings: "opsz" 30, "wght" 200;
-	font-style: italic;
   font-size: 0.5em;
-  padding-top: 32px;
-  color: var(--gray);
+  margin-top: 0.25em;
 }
 
 @media only screen and (max-width: 912px) {
@@ -71,10 +67,7 @@ h2 {
 }
 
 p {
-  font-size: 0.2em;
-  font-variation-settings: "opsz" 11, "wdth" 104, "wght" 328;
-  line-height: 160%;
-  letter-spacing: -0.15px;
+  font-size: 0.156em;
   padding: 0.625em 0;
 }
 
@@ -96,25 +89,20 @@ a,
 
 a:visited {
   text-decoration: none;
-  color: var(--text-color);
 }
 
 .home-link{
 	font-size: 0.25em;
-	font-family: var(--display-font);
 }
 
 
 li {
-  font-family: var(--display-font);
-  text-align: center;
   line-height: normal;
   justify-content: center;
 }
 
 li > a {
   line-height: normal;
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
 }
 
 li.nav-link > a {
@@ -125,8 +113,17 @@ li.footer-link, li.footer-item {
   font-size: 0.125em;
 }
 
-li.footer-link {
-	flex-direction: row;
+.footer-link > a {
+	line-height: 1;
+}
+
+ol.footnotes-list > li {
+	display: list-item;
+	list-style-type: decimal;
+}
+
+li::marker {
+	font-size: 0.156em;
 }
 
 .footer-item {

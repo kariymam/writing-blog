@@ -8,8 +8,8 @@ To-Do:
 
 - [ ] Img folder
 - [ ] Responsive images
-- [ ] Icon styling
-- [ ] Use markdown-it-attrs for adding side-note class to .md files
+- [x] Icon styling
+- [x] Use markdown-it-attrs ~~for adding side-note class to .md files~~ (nicking sidenotes)
 - [ ] Redesign homepage
   - [ ] Add gallery
   - [ ] Add about section

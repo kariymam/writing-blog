@@ -1,5 +1,5 @@
-@import "public/css/base/color.css";
 @import "public/css/base/font.css";
+@import "public/css/base/color.css";
 @import "public/css/base/post.css";
 @import "public/css/components/postlist.css";
 
@@ -30,8 +30,7 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  margin: var(--site-margin)
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -55,6 +54,10 @@ section {
 
 ul {
   list-style: none;
+}
+
+ol {
+	list-style: initial;
 }
 
 li {
@@ -180,8 +183,6 @@ header,
 footer,
 main {
   display: flex;
-  margin-right: 1em;
-  margin-left: 1em;
 }
 
 .container {
@@ -194,7 +195,6 @@ main {
   align-items: center;
   gap: 0.5em 1.5em;
 	padding: var(--container-padding);
-	margin-top: 0.125em;
 }
 
 .home-container {
@@ -217,9 +217,8 @@ main {
 /* FOOTER */
 
 footer > div {
-  padding: 1em 0;
   width: 100%;
-	padding: var(--container-padding);
+	padding: 0 0.25em 0;
 }
 
 footer,
@@ -231,6 +230,19 @@ footer ul {
 
 footer li {
   text-align: left;
+}
+
+li.footer-link {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+  align-items: center;
+	gap: 1em;
+}
+
+.footer-link > a {
+	display: flex;
+  flex-direction: column;
 }
 
 .home-latest {
