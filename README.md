@@ -9,7 +9,7 @@ To-Do:
 - [ ] Img folder
 - [ ] Responsive images
 - [x] Icon styling
-- [x] Use markdown-it-attrs ~~for adding side-note class to .md files~~ (nicking sidenotes)
+- [x] Use markdown-it-attrs ~~for adding side-note class to .md files~~ (nixing sidenotes)
 - [ ] Redesign homepage
   - [ ] Add gallery
   - [ ] Add about section
