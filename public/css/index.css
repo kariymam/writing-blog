@@ -2,13 +2,20 @@
 @import "public/css/base/color.css";
 @import "public/css/base/post.css";
 @import "public/css/components/postlist.css";
+@import "public/css/components/nav.css";
 
 /* Defaults */
 :root {
-  --site-margin: 10%;
+  --site-margin: 128px 128px;
   --mobile-margin: 2em;
   --page-padding: 1em 0.25em 2em 0.25em;
-	--container-padding: 0 0.25em 1em 0.25em;
+  --container-padding: 0 0.25em 1em 0.25em;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --site-margin: 0;
+  }
 }
 
 /* RESET */
@@ -20,9 +27,8 @@
 
 /* GLOBAL */
 
-html,
-body {
-  background: var(--off-white);
+html {
+  background: var(--bg-color);
 }
 
 html {
@@ -30,7 +36,13 @@ html {
 }
 
 body {
-  margin: var(--site-margin)
+  overflow-clip-margin: content-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-width: 0;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -46,18 +58,19 @@ body {
 
 main {
   padding: var(--container-padding);
+  flex-direction: column;
 }
 
-section {
+/* section {
   margin: auto;
-}
+} */
 
 ul {
   list-style: none;
 }
 
 ol {
-	list-style: initial;
+  list-style: initial;
 }
 
 li {
@@ -137,18 +150,8 @@ hr {
 
 /*- MAIN NAVIGATION & NAV PARTS-*/
 
-nav,
-nav ul,
-nav li {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex: 1 0 0;
-  gap: 58px;
-}
-
 header > div {
-	width: 100%;
+  width: 100%;
 }
 
 .home-link {
@@ -183,18 +186,29 @@ header,
 footer,
 main {
   display: flex;
+  width: 100%;
 }
 
-.container {
-  flex-direction: column;
-  align-items: baseline;
+section {
+  width: -webkit-fill-available;
 }
 
-.header-container {
-	display: flex;
-  align-items: center;
-  gap: 0.5em 1.5em;
-	padding: var(--container-padding);
+.textblock {
+	max-width: 4.5em;
+	margin: auto;
+}
+
+.textblock > p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sm-container {
+  max-width: 4em;
+}
+
+.lg-container {
+  max-width: 100%;
 }
 
 .home-container {
@@ -203,22 +217,20 @@ main {
   align-items: flex-start;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .container,
-  .header-container {
-    margin-left: var(--mobile-margin);
-    margin-right: var(--mobile-margin);
-  }
-  .home-container {
-    flex-direction: column;
-  }
+
+.post-date,
+.post-tag {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  gap: 0.156em;
 }
 
 /* FOOTER */
 
 footer > div {
   width: 100%;
-	padding: 0 0.25em 0;
+  padding: 0 0.25em 0;
 }
 
 footer,
@@ -233,15 +245,15 @@ footer li {
 }
 
 li.footer-link {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-	gap: 1em;
+  gap: 1em;
 }
 
 .footer-link > a {
-	display: flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -309,6 +321,24 @@ hr.divider {
 }
 
 /* Html: <i class="ib ps-behance"></i> */
-.ps-behance{
-	@iconUrl ps behance;
+.ps-behance {
+  @iconurl ps behance;
 }
+
+/* ARTICLE CARD */
+
+.ArticleCard {
+
+	/* layouts */
+	display: flex;
+	padding: 24px 29px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
+
+	/* styling */
+	border-radius: 36px;
+	background: #FFF;
+	}
+

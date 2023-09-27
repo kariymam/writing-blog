@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
 const markdownItFootnotes = require('markdown-it-footnote');
@@ -22,6 +22,9 @@ const pluginImages = require("./eleventy.config.images.js");
 
 
 module.exports = function(eleventyConfig) {
+
+	// Layout aliases can make templates more portable
+  eleventyConfig.addLayoutAlias('default', 'layouts/base.njk');
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig.addPassthroughCopy({
@@ -57,6 +60,22 @@ module.exports = function(eleventyConfig) {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
+
+	// Minify js
+	const { minify } = require("terser");
+	eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+		code,
+		callback
+	) {
+		try {
+			const minified = await minify(code);
+			callback(null, minified.code);
+		} catch (err) {
+			console.error("Terser error: ", err);
+			// Fail gracefully.
+			callback(null, code);
+		}
+});
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {
@@ -103,6 +122,7 @@ module.exports = function(eleventyConfig) {
 		mdLib.use(markdownItFootnotes);
 		mdLib.use(markdownItAttrs);
 	});
+
 
 // PostCSS solution via equk https://equk.co.uk/2023/06/29/11ty-postcss-integration-optimized/
 // Run postcss (insert css to html later)

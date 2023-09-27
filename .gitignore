@@ -5,3 +5,4 @@ private/
 .obsidian/
 .DS_Store
 .editorconfig
+.eslintrc.yml

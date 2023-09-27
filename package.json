@@ -49,5 +49,8 @@
 		"postcss": "^8.4.30",
 		"postcss-cli": "^10.1.0",
 		"postcss-import": "^15.1.0"
+	},
+	"dependencies": {
+		"terser": "^5.20.0"
 	}
 }

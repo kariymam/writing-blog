@@ -17,8 +17,7 @@
 
 /* FONT SIZE SETTINGS */
 
-html,
-body {
+html, body {
   font-size: 128px;
   font-family: var(--body-font);
   color: var(--text-color);
@@ -28,12 +27,12 @@ h1,
 h2,
 h3,
 h4 {
+	color: var(--text-color);
   line-height: 1;
 }
 
 h1,
 h2 {
-  text-align: left;
 	line-height: 110%;
 }
 
@@ -95,6 +94,9 @@ a:visited {
 	font-size: 0.25em;
 }
 
+.visually-hidden {
+	font-size: 0.156em;
+}
 
 li {
   line-height: normal;

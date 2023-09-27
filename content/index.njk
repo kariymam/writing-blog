@@ -1,16 +1,19 @@
 ---
 layout: layouts/home.njk
 eleventyNavigation:
-  key: Home
+  key: home
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-<section>
+{% include "about.njk" %}
+<section class="lg-container">
 <div class="home-container">
 	<div>
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 		<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+	</div>
+	<div class="ArticleCard">
 		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
 		{% include "postslist.njk" %}
@@ -21,13 +24,14 @@ numberOfLatestPostsToShow: 3
 		<small>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</small>
 		{% endif %}
 	</div>
+</div>
 </section>
 
-{# List every content page in the project #}
+<!-- {# List every content page in the project #}
 {#
 <ul>
 	{%- for entry in collections.all %}
 	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
 	{%- endfor %}
 </ul>
-#}
+#} -->

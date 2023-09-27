@@ -1,19 +1,10 @@
-article {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 2fr 1fr;
-	grid-gap: 0.25em;
-}
-
-article, .links-nextprev {
+/* article, .links-nextprev {
 	max-width: 1024px;
-}
+} */
 
 article > header {
 	display: flex;
 	flex-direction: column;
-	grid-column: 1 / 3;
-	grid-row: 1 / 3;
 }
 
 article > section {
@@ -24,23 +15,21 @@ article > section {
 
 .post-header {
 	margin: 0;
+	text-align: center;
 }
 
 .post-metadata {
-	margin-bottom: 0.5em;
-}
-
-.post-date, .post-tag {
 	display: flex;
-	width: 100%;
-  justify-content: left;
-	gap: 0.156em;
+    flex-direction: column;
+    gap: 0.156em;
+    margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 /* ------- FOOTNOTES -------------------------------------*/
 
-.sidenote { /* ------- LEAVE THIS ALONE KARIYMA -------------------------------------*/
-	float: right;
+/* .sidenote { ------- LEAVE THIS ALONE KARIYMA -------------------------------------*/
+	/* float: right;
 	translate: 36px;
 	clear: right;
 	margin-right: -50%;
@@ -60,7 +49,7 @@ article > section {
 
 article {
 counter-reset: sidenote;
-}
+} */
 
 /* sup {
 vertical-align: super;
@@ -72,7 +61,7 @@ font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
 font-size: 0.5em;
 } */
 
-[aria-describedby="sidenote-label"] {
+/* [aria-describedby="sidenote-label"] {
 counter-increment: sidenote;
 }
 
@@ -87,7 +76,7 @@ font-size: 0.5em;
 }
 .sidenote > img {
 margin-top: 0.5em;
-}
+} */
 
 /* ------- PREVIOUS / NEXT -------------------------------------*/
 
