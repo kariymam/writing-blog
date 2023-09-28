@@ -1,16 +1,10 @@
 {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 <nav id="mainNav" role="navigation">
 		<h2 class="visually-hidden">Top level navigation menu</h2>
-		<div class="indicator absolute"></div>
+		<div class="absolute">
+			<div class="indicator"></div>
+		</div>
 			{%- for entry in collections.all | eleventyNavigation %}
 				<a id="{{ entry.title }}" class="transition" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 			{%- endfor %}
 </nav>
-
-{# <nav role="navigation">
-   <div id="#indicator" class="indicator absolute"></div>
-  <a id="home" class="transition" href="/">home</a>
-  <a id="writing" class="transition" href="/writing/">writing</a>
-	<a id="projects" class="transition" href="/projects" aria-current="page">projects</a>
-  <a id="reading" class="transition" href="/reading" aria-current="page">reading</a>
-</nav> #}

@@ -45,14 +45,3 @@ span.divider {
 	border-left: var(--divider);
 	height: 0.25em;
 }
-
-.post-date,
-.post-tag {
-  font-family: var(--display-font);
-  font-size: 0.2em;
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 300;
-  line-height: normal;
-  letter-spacing: -0.24px;
-  width: 100%;
-  color: var(--gray);
-}

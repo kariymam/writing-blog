@@ -9,7 +9,7 @@
   --site-margin: 128px 128px;
   --mobile-margin: 2em;
   --page-padding: 1em 0.25em 2em 0.25em;
-  --container-padding: 0 0.25em 1em 0.25em;
+  --container-padding: 0 0.25em;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,7 +57,6 @@ body {
 }
 
 main {
-  padding: var(--container-padding);
   flex-direction: column;
 }
 
@@ -182,11 +181,16 @@ a.home-link {
 }
 
 .container,
-header,
-footer,
 main {
   display: flex;
   width: 100%;
+}
+
+.header-container,
+.footer-container,
+.post-metadata,
+section {
+  padding: var(--container-padding);
 }
 
 section {
@@ -194,17 +198,21 @@ section {
 }
 
 .textblock {
-	max-width: 4.5em;
-	margin: auto;
+  max-width: 5.5em;
+  margin: auto;
 }
 
 .textblock > p {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sm-container {
-  max-width: 4em;
+  width: 100%;
+}
+
+.sm-container > p {
+  max-width: 600px;
 }
 
 .lg-container {
@@ -218,19 +226,21 @@ section {
   width: 100%;
 }
 
-.post-date,
-.post-tag {
-  display: flex;
-  width: 100%;
-  justify-content: left;
-  gap: 0.156em;
+/* TEXT STRUCTURE */
+
+.sm-link {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	align-items: center;
+	gap: 4px;
 }
 
 /* FOOTER */
 
 footer > div {
   width: 100%;
-  padding: 0 0.25em 0;
+  margin: 128px 0;
 }
 
 footer,
@@ -244,17 +254,8 @@ footer li {
   text-align: left;
 }
 
-li.footer-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1em;
-}
-
-.footer-link > a {
-  display: flex;
-  flex-direction: column;
+.footer-link>a{
+	margin-bottom: 8px;
 }
 
 .home-latest {
@@ -328,17 +329,22 @@ hr.divider {
 /* ARTICLE CARD */
 
 .ArticleCard {
+  /* layouts */
+  display: flex;
+  padding: 24px 29px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
 
-	/* layouts */
-	display: flex;
-	padding: 24px 29px;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 16px;
-	align-self: stretch;
+  /* styling */
+  border-radius: 36px;
+  background: #fff;
+}
 
-	/* styling */
-	border-radius: 36px;
-	background: #FFF;
-	}
+/* ICONS */
 
+box-icon {
+	width: 16px;
+  height: 16px;
+}

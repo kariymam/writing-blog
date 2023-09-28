@@ -1,18 +1,20 @@
-@font-face {
-  font-family: kepler-3-variable, sans-serif;
-  src: url(https://use.typekit.net/uxs6fmy.css);
-}
-
-@font-face {
-  font-family: degular-variable, sans-serif;
-  src: url(https://use.typekit.net/uxs6fmy.css);
-}
-
 :root {
-  --display-font: degular-variable, "Franklin Gothic Medium", "Arial Narrow",
-    Helvetica, Arial, sans-serif, Icons;
-  --body-font: kepler-3-variable, Georgia, Garamond, Times, serif, Icons;
+  --display-font: 'DM Mono', monospace, Helvetica, Arial, sans-serif, Icons;
+  --body-font: 'DM Sans', Helvetica, Arial, sans-serif, Icons;
+	--variation-settings: "opsz" 11, "wdth" 100, "wght" 300; /* font-variation-settings */
+	--xsm-text: 0.125em;
+	--sm-text: 0.156em;
+	--lg-text: 0.5em;
+	--xlg-text: 1em;
 
+}
+
+@media only screen and (max-width: 912px) {
+  :root {
+    --xsm-text: 0.125em;
+		--sm-text: 0.125em;
+		--lg-text: 0.25em;
+  }
 }
 
 /* FONT SIZE SETTINGS */
@@ -27,61 +29,44 @@ h1,
 h2,
 h3,
 h4 {
+	font-family: var(--display-font);
 	color: var(--text-color);
   line-height: 1;
 }
 
+h1 {
+	font-size: var(--lg-text);
+}
+
+h2 {
+	font-size: var(--sm-text);
+	margin: 0.156em 0;
+}
+
 h1,
 h2 {
+	letter-spacing: -0.01em;
 	line-height: 110%;
 }
 
 h3,
 h4 {
-  font-size: 0.2em;
-}
-
-h1 {
+	font-size: var(--sm-text);
   font-size: 0.5em;
-}
-
-h2 {
-  font-size: 0.5em;
-  margin-top: 0.25em;
-}
-
-@media only screen and (max-width: 912px) {
-  h1 {
-    font-size: 0.5em;
-  }
-
-  h2 {
-    font-size: 0.25em;
-  }
-
-  h3,
-  h4 {
-    font-size: 0.156em;
-  }
 }
 
 p {
-  font-size: 0.156em;
-  padding: 0.625em 0;
-}
-
-@media only screen and (max-width: 912px) {
-  p {
-    font-size: 0.25em;
-  }
+  font-size: var(--sm-text);
+  padding: 0 0 1em 0;
+	font-variation-settings: var(--variation-settings);
+	line-height: 140%;
 }
 
 small {
-  font-size: 0.125em;
+  font-size: var(--xsm-text);
 }
 
-a,
-.sidenote {
+a {
   text-decoration: none;
   counter-reset: none;
 }
@@ -91,11 +76,11 @@ a:visited {
 }
 
 .home-link{
-	font-size: 0.25em;
+	font-size: var(--sm-text);
 }
 
 .visually-hidden {
-	font-size: 0.156em;
+	font-size: var(--sm-text);
 }
 
 li {
@@ -107,15 +92,20 @@ li > a {
   line-height: normal;
 }
 
-li.nav-link > a {
-  font-size: 0.156em;
+nav > a {
+	font-family: var(--display-font);
+  font-size: var(--xsm-text);
 }
 
-li.footer-link, li.footer-item {
-  font-size: 0.125em;
+.sm-link {
+  font-size: var(--xsm-text);
 }
 
-.footer-link > a {
+.footer-item {
+	font-size: var(--xsm-text);
+}
+
+.footer-link {
 	line-height: 1;
 }
 
@@ -125,9 +115,24 @@ ol.footnotes-list > li {
 }
 
 li::marker {
-	font-size: 0.156em;
+	font-size: var(--sm-text);
 }
 
 .footer-item {
 	max-width: 600px;
+}
+
+.post-header > h1 {
+	font-size: var(--xlg-text);
+	text-align: center;
+}
+
+.post-date,
+.post-tag {
+  font-family: var(--display-font);
+  font-size: var(--sm-text);
+  line-height: normal;
+  letter-spacing: -0.24px;
+  width: 100%;
+  color: var(--gray);
 }

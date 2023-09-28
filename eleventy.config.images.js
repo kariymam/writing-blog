@@ -26,6 +26,7 @@ module.exports = eleventyConfig => {
 		let imageAttributes = {
 			alt,
 			sizes,
+			widths,
 			loading: "lazy",
 			decoding: "async",
 		};

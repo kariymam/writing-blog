@@ -3,9 +3,13 @@ title: First post
 description: This is a description
 date: "git Last Modified"
 draft: false
+imagepath: "test.jpg"
 tags:
   - exhibition-review
 ---
+
+{{ imagepath }}
+{% image "test.jpg", "photo of Joe Pera" %}
 
 About a week ago, Netflix released Ava DuVernay’s When They See Us, a mini-series unearthing the stories of the boys who became The Central Park 5. The Central Park jogger case against four African American teenagers and one Hispanic American teenager marks one of the worst instances of injustice against black children in legal history.[^first]
 

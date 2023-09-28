@@ -15,15 +15,14 @@ article > section {
 
 .post-header {
 	margin: 0;
-	text-align: center;
+	padding-bottom: 0.25em;
 }
 
 .post-metadata {
 	display: flex;
     flex-direction: column;
-    gap: 0.156em;
-    margin-bottom: 0.5em;
-	margin-bottom: 0.5em;
+    gap: 8px;
+    margin: 8px 0 1em 0;
 }
 
 /* ------- FOOTNOTES -------------------------------------*/

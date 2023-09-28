@@ -15,9 +15,9 @@ cssFile: "base/post.css"
 				<li class="post-date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
 			</ul>
 			<h1>{{ title }}</h1>
-			<h2>{{ description }}</h2>
 		</header>
 			<div class="textblock">
+				<h2>{{ description }}</h2>
 				{{ content | safe }}
 			</div>
 	</article>
