@@ -1,30 +1,35 @@
 :root {
-	/*static*/
-	--off-white: rgba(244, 244, 232, 0.5);
-	--orange-red: rgba(255, 105, 20, 1);
-	--color-gray-19: rgba(16,16,16, 1);
-	--color-gray-17: #171616;
-  --color-gray-51: rgba(51, 51, 51, 1);
-	--color-gray-115: rgba(115, 115, 115, 1);
-  --color-gray-224: rgb(248,248,255, 0.85);
-	/*dynamic*/
-	--bg-color: var(--color-gray-224);
-	--nav-indicator-hover: var(--orange-red);
+	/* primary */					/**    Dark Mode        **/
+	--primary: #008080; /**    links, hover: rgb(106, 38, 253)       **/
+	--background: #fdfcf4; /**  background: color-gray-19     **/
 
-	--text-color: var(--color-gray-19);
-  --text-color-link-active: var(--color-gray-19);
-  --text-color-link-visited: var(--orange-red);
-  --text-color-link: var(--orange-red);
-	--border: 1px solid var(--color-gray-51);
+	/* grays */
+	--color-gray-1: rgba(27, 27, 27, 1); /* 19 */
+	--color-gray-2: rgba(33,36,35); /* 17 */
+  --color-gray-3: rgba(51, 51, 51, 1); /* 51 */
+	--color-gray-4: rgba(115, 115, 115, 1); /* 115 */
+  --color-gray-5: rgba(244,240,240,1); /* 224 */
+
+	--border: 1px solid var(--primary);
+	/* text */
+	--text-color: var(--primary);
+	--text-color-link-active: var(--color-gray-1);
+  --text-color-link-visited: var(--primary);
+	--text-color-link: var(--primary);
+
+	/*static*/
+	--off-white: rgba(238, 230, 217, 0.85);
+	--orange-red: rgba(255, 105, 20, 1);
+	/*dynamic*/
+	--nav-indicator-hover: var(--color-gray-5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-		--off-white: var(--color-gray-17);
-		--orange-red: rgb(106, 38, 253);
-    --bg-color: var(--color-gray-19);
-		/* --nav-indicator-hover: #000; */
-    --text-color: var(--color-gray-224);
+		--primary: rgb(106, 38, 253);
+    --background: var(--color-gray-19);
+
+    --text-color: var(--color-gray-5);
     --text-color-link-active: #a1a1fc;
 		--hr: 1px solid var(--color-gray-224);
   }

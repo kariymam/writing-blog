@@ -6,26 +6,24 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 3
 ---
-{% include "about.njk" %}
 <section class="lg-container">
-	<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
-</section>
-<section class="sm-container">
-<!-- <div class="home-container"> -->
-		{% set postsCount = collections.posts | length %}
+	<aside>
+		{% include "about.njk" %}
+		<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+	</aside>
+	{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-	<div>
-		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-		{% set postslistCounter = postsCount %}
-		{% include "postslist.njk" %}
+	<div class="wrapper">
+			{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+			{% set postslistCounter = postsCount %}
+			{% include "postslist.njk" %}
 
-		{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-		{% if morePosts > 0 %}
-		<hr class="divider">
-		<small>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</small>
-		{% endif %}
+			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+			{% if morePosts > 0 %}
+			<hr class="divider">
+			<small>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</small>
+			{% endif %}
 	</div>
-<!-- </div> -->
 </section>
 
 <!-- {# List every content page in the project #}

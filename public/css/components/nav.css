@@ -2,26 +2,26 @@ header.main-navigation {
 	position: sticky;
 	top: 0;
 	padding: 0.25em 0;
-	background-color: var(--off-white);
+	background-color: var(--background);
   border-bottom: var(--border);
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 	header.main-navigation {
 		position: fixed;
 	}
-}
+} */
 
 nav {
   backdrop-filter: blur(4px);
-    background-color: var(--bg-color);
+    background-color: var(--background);
     border: var(--border);
     border-radius: 36px;
     display: flex;
     flex-shrink: 0;
     height: 34px;
     margin: 4px 0;
-    width: 342px;
+    width: auto; /* 316px */
 }
 
 .header-container {

@@ -17,7 +17,6 @@ article > section {
 .post-metadata {
   display: flex;
   flex-direction: column;
-  margin: 8px 0 1em 0;
 }
 
 /* ------- FOOTNOTES -------------------------------------*/
@@ -98,7 +97,7 @@ margin-top: 0.5em;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 16px;
-  margin: var(--container-padding);
+  margin: var(--container-margin);
 }
 .postlist-item {
   display: flex;
