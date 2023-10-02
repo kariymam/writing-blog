@@ -5,6 +5,6 @@
 			<div class="indicator"></div>
 		</div>
 			{%- for entry in collections.all | eleventyNavigation %}
-				<a id="{{ entry.title }}" class="transition" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+				<a id="{{ entry.title }}" aria-label="{{ entry.description }}" class="transition" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 			{%- endfor %}
 </nav>

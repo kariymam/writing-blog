@@ -10,24 +10,20 @@
 		<link rel="icon" href="{{ '/img/website_logo-01.png' | url }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital@0;1&family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.typekit.net/uxs6fmy.css">
 		<meta name="generator" content="{{ eleventy.generator }}">
 		<style>
 			{% include "_site/css/public.css" %}
 		</style>
-
 		{# <link rel="stylesheet" href="/css/public.css" /> #}
     {# <link rel="stylesheet" href="/css/{{ cssFile }}" /> #}
+	 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 		<header class="main-navigation">
+
 			<div class="header-container">
-			<a href="/" class="home-link" title="{{ metadata.title }}">
-				[ka · ree · mah] murphy
-				</a>
 			{% include "header.njk" %}
 			</div>
 		</header>
@@ -35,15 +31,12 @@
 			{{ content | safe }}
 		</main>
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-		<footer class="main-footer">
+		<footer class="lg-container">
 			{% include 'footer.njk' %}
 		</footer>
+		{% set js %}
+  	{% include "utilis.js" %}
+		{% endset %}
+		<script>{{ js | jsmin | safe }}</script>
 	</body>
-	{% set js %}
-  {% include "index.js" %}
-	{% endset %}
-	 <script>
-			{{ js | jsmin | safe }}
-	 </script>
-	 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </html>

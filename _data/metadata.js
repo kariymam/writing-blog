@@ -2,7 +2,7 @@ module.exports = {
 	"title": "Kariyma Murphy",
 	"url": "https://example.com/",
 	"language": "en",
-	"description": "I am writing about my experiences as a naval navel-gazer.",
+	"description": "I do a little bit of this and a little bit of that",
 	"author": {
 		"name": "Kariyma Murphy",
 		"email": "kariyma@oohnice.design",

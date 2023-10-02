@@ -6,3 +6,4 @@ private/
 .DS_Store
 .editorconfig
 .eslintrc.yml
+.hintrc

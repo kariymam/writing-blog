@@ -6,6 +6,8 @@ eleventyNavigation:
   key: writing
   order: 2
 ---
-<h1>{{ title }}</h1>
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<div class="content">
+	<h1>{{ title }}</h1>
+	{% set postslist = collections.posts %}
+	{% include "postslist.njk" %}
+</div>
