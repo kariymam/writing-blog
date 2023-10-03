@@ -15,7 +15,6 @@ header.main-navigation {
 nav {
   backdrop-filter: blur(4px);
     background-color: var(--background);
-    border: var(--border);
     border-radius: 36px;
     display: flex;
     flex-shrink: 0;

@@ -31,7 +31,7 @@ layout: layouts/base.njk
 				<li class="sm-link">tagged <a href="{{ tagUrl }}">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
 				{%- endfor %}
 				<li class="sm-link"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-				{%- if nextPost %} / <li><a href="{{ nextPost.url }}" aria-describedby="Next post">{{ nextPost.data.title }}</a></li>{% endif %}
+				<!-- {%- if nextPost %} / <li><a href="{{ nextPost.url }}" aria-describedby="Next post">{{ nextPost.data.title }}</a></li>{% endif %} -->
 			</ul>
 		</header>
 
@@ -39,7 +39,7 @@ layout: layouts/base.njk
 	{# Only include the syntax highlighter CSS on blog posts #}
 	{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 	{%- css %}{% include "public/css/base/prism-diff.css" %}{%- endcss %}
-	<article class="wrapper">
+	<article class="article-wrapper">
 		{% if thumb %}
 			 <img src="{{ thumb }}" alt="{{ thumbAlt }}" class="article-img">
 		{% endif %}

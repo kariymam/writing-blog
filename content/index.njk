@@ -8,21 +8,28 @@ numberOfLatestPostsToShow: 3
 ---
 <section class="lg-container">
 	<aside>
-		{% include "about.njk" %}
-		<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+		<header id="about" class="content sm-content">
+			{% include "about.njk" %}
+		</header>
 	</aside>
-	{% set postsCount = collections.posts | length %}
+		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-	<div class="wrapper">
-			{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-			{% set postslistCounter = postsCount %}
-			{% include "postslist.njk" %}
+	<div class="main-wrapper">
+		<div class="content">
+			<h2>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h2>
+				{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+				{% set postslistCounter = postsCount %}
+				{% include "postslist.njk" %}
 
-			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-			{% if morePosts > 0 %}
-			<hr class="divider">
-			<small>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</small>
-			{% endif %}
+				{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+				{% if morePosts > 0 %}
+				<hr class="divider">
+				<small>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</small>
+				{% endif %}
+		</div>
+		<!-- <div class="content">
+			<a href="/blog">View all posts</a>
+		</div> -->
 	</div>
 </section>
 

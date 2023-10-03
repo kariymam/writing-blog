@@ -1,6 +1,8 @@
 /*     navigation    */
 const indicator = document.querySelector('.indicator'); // target element
 const navLinks = document.querySelectorAll('.transition'); // Get references to the hoverable
+// const prop = (k, v) => style.setProperty(k, v)
+// prop("-webkit-transform", `translate(${l}px)`);
 
 // for each element with transition class
 navLinks.forEach(transition => {
@@ -8,7 +10,7 @@ navLinks.forEach(transition => {
 		const l = transition.offsetLeft;
 		const w = transition.offsetWidth;
 		if (transition.id) {
-			indicator.style.transform = `translate(${l}px)`; // working
+			indicator.style.webkitTransform = `translate(${l}px)`; // working
 			indicator.style.width = `${w}px`; // working
 		} else { }
 			indicator.style.opacity = "1";

@@ -17,20 +17,34 @@
   --text-color-link-visited: var(--primary);
 	--text-color-link: var(--primary);
 
-	/*static*/
-	--off-white: rgba(238, 230, 217, 0.85);
-	--orange-red: rgba(255, 105, 20, 1);
 	/*dynamic*/
 	--nav-indicator-hover: var(--color-gray-5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-		--primary: rgb(106, 38, 253);
-    --background: var(--color-gray-19);
+		--primary: #008080;
+    --background: var(--color-gray-2);
+		--nav-indicator-hover: var(--color-gray-1);
 
     --text-color: var(--color-gray-5);
-    --text-color-link-active: #a1a1fc;
+		--text-color-link-visited: var(--primary);
+    --text-color-link-active: #74d5d4;
 		--hr: 1px solid var(--color-gray-224);
   }
+}
+
+a[href] {
+  color: var(--text-color-link);
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a[href]:visited {
+  color: var(--text-color-link-visited);
+}
+
+a[href]:hover,
+a[href]:active {
+  color: var(--text-color-link-active);
 }
